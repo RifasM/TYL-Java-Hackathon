@@ -1,0 +1,14 @@
+</div>
+<div class="jumbotron jumbotron-fluid" >
+<div>
+	<img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfIlJBvsRjOJUviroGBY5Q2VOtGNqxltHq7LHbbQk-lgvdnGS9">
+        <h1 class="display-4" style="margin-top: 5px; padding-top: 10px; font-family: sans-serif;"><b>CMR Stocks</b></h1>
+        <h3>Live Stocks!!</h3>
+
+</div>
+</div>
+    <div style="overflow:hidden;margin:15px auto; max-width: 200%">
+        <iframe  style="border:0px none; margin-left: 0px; height: 859px; margin-top: -450px; width: 100%; padding:10px" id="ifrm" class='richard' onload="setIframeHeight(this.id);rifas()" src='https://www.bseindia.com/sensex/code/16/'></iframe>
+  </div>
+</body>
+</html>

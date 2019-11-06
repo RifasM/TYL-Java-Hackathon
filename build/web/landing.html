@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CMR Stocks</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  function getDocHeight(doc) {
+    doc = doc || document;
+    // stackoverflow.com/questions/1145850/
+    var body = doc.body, html = doc.documentElement;
+    var height = Math.max( body.scrollHeight, body.offsetHeight, 
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+    return height;
+}
+function rifas(){
+    $("#ifrm").contents().find(".i-amphtml-fill-content").remove();
+
+    $("#ifrm").contents().find(".i-amphtml-replaced-content").remove();
+}
+function setIframeHeight(id) {
+    var ifrm = document.getElementById(id);
+    var doc = ifrm.contentDocument? ifrm.contentDocument: 
+        ifrm.contentWindow.document;
+    ifrm.style.visibility = 'hidden';
+    ifrm.style.height = "10px"; // reset to minimal height ...
+    // IE opt. for bing/msn needs a bit added or scrollbar appears
+    ifrm.style.height = getDocHeight( doc ) + 4 + "px";
+    ifrm.style.visibility = 'visible';
+}
+
+
+ // parent.iframeLoaded()
+</script>   
+ 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+    .mobipadd{
+        
+    }
+	.notification{
+		margin-left: 2px;
+		padding: 0;
+	}
+        .richard{
+            width: 100%;
+            height: 500px;
+        }
+	.logo{
+		width: 120px;
+		height: 120px;
+		float: left;
+                border-radius: 5px;
+		margin-right: 20px;
+		margin-bottom: 3px;
+		margin-left: 10px;
+		
+	}
+
+
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Stock</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <a href="#" class="notification">
+ 	
+   <button type="button" class="btn btn-primary">
+ 	Notifications</i> <span class="badge badge-light">9</span>
+  <span class="sr-only">unread messages</span>
+</button>
+  
+	</a>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid" >
+<div>
+	<img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfIlJBvsRjOJUviroGBY5Q2VOtGNqxltHq7LHbbQk-lgvdnGS9">
+        <h1 class="display-4" style="margin-top: 5px; padding-top: 10px; font-family: sans-serif;"><b>CMR Stocks</b></h1>
+        <h3>Live Stocks!!</h3>
+
+</div>
+</div>
+    <div style="overflow:hidden;margin:15px auto; max-width: 200%">
+        <iframe  style="border:0px none; margin-left: 0px; height: 859px; margin-top: -450px; width: 100%; padding:10px" id="ifrm" class='richard' onload="setIframeHeight(this.id);rifas()" src='https://www.bseindia.com/sensex/code/16/'></iframe>
+  </div>
+</body>
+</html>
